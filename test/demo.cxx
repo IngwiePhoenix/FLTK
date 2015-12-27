@@ -76,7 +76,6 @@ void create_the_forms() {
   choice->add("plastic");
   choice->add("flat");
   choice->callback((Fl_Callback *)doscheme);
-  Fl::scheme("flat");
   if (!Fl::scheme()) choice->value(0);
   else if (!strcmp(Fl::scheme(), "gtk+")) choice->value(1);
   else if (!strcmp(Fl::scheme(), "gleam")) choice->value(2);
