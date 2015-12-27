@@ -325,6 +325,10 @@ SOURCE=..\..\src\fl_font.cxx
 # End Source File
 # Begin Source File
 
+SOURCE=..\..\src\fl_flat.cxx
+# End Source File
+# Begin Source File
+
 SOURCE=..\..\src\Fl_get_key.cxx
 # End Source File
 # Begin Source File

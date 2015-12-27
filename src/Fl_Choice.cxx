@@ -168,7 +168,11 @@ int Fl_Choice::handle(int e) {
   J1:
     if (Fl::scheme()
 	|| fl_contrast(textcolor(), FL_BACKGROUND2_COLOR) != textcolor()) {
-      v = menu()->pulldown(x(), y(), w(), h(), mvalue(), this);
+		if (Fl::is_scheme("flat")) {
+          v = menu()->pulldown(x(), y(), w(), h(), NULL, this);
+	    } else {
+          v = menu()->pulldown(x(), y(), w(), h(), mvalue(), this);
+	    }
     } else {
       // In order to preserve the old look-n-feel of "white" menus,
       // temporarily override the color() of this widget...

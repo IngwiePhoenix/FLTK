@@ -118,6 +118,7 @@ set(CPPFILES
   fl_draw_pixmap.cxx
   fl_engraved_label.cxx
   fl_file_dir.cxx
+  fl_flat.cxx
   fl_font.cxx
   fl_gleam.cxx
   fl_gtk.cxx

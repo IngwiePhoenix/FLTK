@@ -140,6 +140,7 @@ CPPFILES = \
 	fl_engraved_label.cxx \
 	fl_file_dir.cxx \
 	fl_font.cxx \
+	fl_flat.cxx \
 	fl_gleam.cxx \
 	fl_gtk.cxx \
 	fl_labeltype.cxx \

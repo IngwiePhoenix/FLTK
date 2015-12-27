@@ -343,6 +343,14 @@ static struct {
   {fl_down_box,		2,2,4,4,0}, // _FL_GLEAM_THIN_DOWN_BOX
   {fl_up_box,	       	2,2,4,4,0}, // _FL_GLEAM_ROUND_UP_BOX
   {fl_down_box,		2,2,4,4,0}, // _FL_GLEAM_ROUND_DOWN_BOX
+  {fl_up_box,		2,2,4,4,0}, // _FL_FLAT_UP_BOX
+  {fl_down_box,		2,2,4,4,0}, // _FL_FLAT_DOWN_BOX
+  {fl_up_frame,		2,2,4,4,0}, // _FL_FLAT_UP_FRAME
+  {fl_down_frame,	2,2,4,4,0}, // _FL_FLAT_DOWN_FRAME
+  {fl_up_box,		2,2,4,4,0}, // _FL_FLAT_THIN_UP_BOX
+  {fl_down_box,		2,2,4,4,0}, // _FL_FLAT_THIN_DOWN_BOX
+  {fl_up_box,	       	2,2,4,4,0}, // _FL_FLAT_ROUND_UP_BOX
+  {fl_down_box,		2,2,4,4,0}, // _FL_FLAT_ROUND_DOWN_BOX
   {fl_up_box,		3,3,6,6,0}, // FL_FREE_BOX+0
   {fl_down_box,		3,3,6,6,0}, // FL_FREE_BOX+1
   {fl_up_box,		3,3,6,6,0}, // FL_FREE_BOX+2

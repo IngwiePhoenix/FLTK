@@ -46,7 +46,13 @@
 void Fl_Input::draw() {
   if (input_type() == FL_HIDDEN_INPUT) return;
   Fl_Boxtype b = box();
-  if (damage() & FL_DAMAGE_ALL) draw_box(b, color());
+  if (damage() & FL_DAMAGE_ALL) {
+	if (Fl::is_scheme("flat")) {
+	  draw_box((Fl::focus() == this)?b:FL_UP_BOX, color());
+	} else {
+	  draw_box(b, color());
+	}
+  }
   Fl_Input_::drawtext(x()+Fl::box_dx(b), y()+Fl::box_dy(b),
 		      w()-Fl::box_dw(b), h()-Fl::box_dh(b));
 }
@@ -590,14 +596,17 @@ int Fl_Input::handle(int event) {
   static int dnd_save_position, dnd_save_mark, drag_start = -1, newpos;
   static Fl_Widget *dnd_save_focus = NULL;
   switch (event) {
-#ifdef __APPLE__
     case FL_UNFOCUS:
+#ifdef __APPLE__
       if (Fl::compose_state) {
 	this->mark( this->position() );
 	Fl::reset_marked_text();
       }
-      break;
 #endif
+      if (Fl::is_scheme("flat")) {
+		redraw();
+	  }
+      break;
     case FL_FOCUS:
       switch (Fl::event_key()) {
         case FL_Right:
@@ -619,6 +628,9 @@ int Fl_Input::handle(int event) {
           position(position(),mark());// turns off the saved up/down arrow position
           break;
       }
+      if (Fl::is_scheme("flat")) {
+		redraw();
+	  }
       break;
       
     case FL_KEYBOARD:
