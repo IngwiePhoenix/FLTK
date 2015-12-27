@@ -51,6 +51,7 @@ static VN_struct btypes[]=
    {FL_GTK_UP_BOX,"GTK up box"},
    {FL_GTK_ROUND_UP_BOX,"GTK round up box"},
    {FL_GLEAM_UP_BOX,"Gleam up box"},
+   {FL_FLAT_UP_BOX,"Flat up box"},
    /* sentinel */
    {(Fl_Boxtype)(-1)}
 };

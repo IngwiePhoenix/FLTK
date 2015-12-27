@@ -196,6 +196,18 @@ Fl_Widget::~Fl_Widget() {
 void
 Fl_Widget::draw_focus(Fl_Boxtype B, int X, int Y, int W, int H) const {
   if (!Fl::visible_focus()) return;
+  
+  if (Fl::is_scheme("flat")) {
+    switch (B) {
+	  case _FL_ROUND_UP_BOX:
+	  case _FL_ROUND_DOWN_BOX:
+	    break;
+	  default:
+		fl_rect(X, Y, W, H, FL_SELECTION_COLOR);
+	    break;
+    }
+	return;
+  }
   switch (B) {
     case FL_DOWN_BOX:
     case FL_DOWN_FRAME:

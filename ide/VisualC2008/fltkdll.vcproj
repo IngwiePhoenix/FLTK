@@ -2970,6 +2970,10 @@
 			>
 		</File>
 		<File
+			RelativePath="..\..\src\fl_flat.cxx"
+			>
+		</File>
+		<File
 			RelativePath="..\..\src\fl_gleam.cxx"
 			>
 		</File>

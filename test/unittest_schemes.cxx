@@ -63,6 +63,7 @@ public:
     schemechoice->add("plastic");
     schemechoice->add("gtk+");
     schemechoice->add("gleam");
+    schemechoice->add("flat");
     schemechoice->value(0);
     schemechoice->labelfont(FL_HELVETICA_BOLD);
     const char *name = Fl::scheme();
@@ -70,6 +71,7 @@ public:
            if ( strcmp(name, "plastic") == 0) { schemechoice->value(1); }
       else if ( strcmp(name, "gtk+")    == 0) { schemechoice->value(2); }
       else if ( strcmp(name, "gleam")   == 0) { schemechoice->value(3); }
+      else if ( strcmp(name, "flat")   == 0) { schemechoice->value(4); }
     }
     schemechoice->callback(SchemeChoice_CB, (void*)this);
 
